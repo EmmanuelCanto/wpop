@@ -1,17 +1,13 @@
-//
-//  FloatingWindowApp.swift
-//  FloatingWindow
-//
-//  Created by Emmanuel Canto on 10/03/26.
-//
-
 import SwiftUI
 
 @main
 struct FloatingWindowApp: App {
+
+    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
     var body: some Scene {
-        WindowGroup {
-            ContentView()
+        Settings {
+            EmptyView()
         }
     }
 }
