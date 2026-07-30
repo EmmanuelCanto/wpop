@@ -6,13 +6,31 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		EFD71B3A09E8401B8F409B60 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = C598DCB28E13446DB1666578 /* Sparkle */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
-		4BB46CB52F61297F0092369A /* FloatingWindow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FloatingWindow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BB46CB52F61297F0092369A /* Wpop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wpop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		22F8873FF36144F3B9F5623D /* Exceptions for "FloatingWindow" folder in "FloatingWindow" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				.gitignore,
+				Info.plist,
+			);
+			target = 4BB46CB42F61297F0092369A /* FloatingWindow */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		4BB46CB72F61297F0092369A /* FloatingWindow */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				22F8873FF36144F3B9F5623D /* Exceptions for "FloatingWindow" folder in "FloatingWindow" target */,
+			);
 			path = FloatingWindow;
 			sourceTree = "<group>";
 		};
@@ -23,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFD71B3A09E8401B8F409B60 /* Sparkle in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,7 +59,7 @@
 		4BB46CB62F61297F0092369A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4BB46CB52F61297F0092369A /* FloatingWindow.app */,
+				4BB46CB52F61297F0092369A /* Wpop.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,9 +84,10 @@
 			);
 			name = FloatingWindow;
 			packageProductDependencies = (
+				C598DCB28E13446DB1666578 /* Sparkle */,
 			);
 			productName = FloatingWindow;
-			productReference = 4BB46CB52F61297F0092369A /* FloatingWindow.app */;
+			productReference = 4BB46CB52F61297F0092369A /* Wpop.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -85,7 +105,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4BB46CB02F61297F0092369A /* Build configuration list for PBXProject "FloatingWindow" */;
+			buildConfigurationList = 4BB46CB02F61297F0092369A /* Build configuration list for PBXProject "Wpop" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -97,6 +117,9 @@
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 4BB46CB62F61297F0092369A /* Products */;
 			projectDirPath = "";
+			packageReferences = (
+				7709609D580C40E8ABDE2468 /* XCRemoteSwiftPackageReference "Sparkle" */,
+			);
 			projectRoot = "";
 			targets = (
 				4BB46CB42F61297F0092369A /* FloatingWindow */,
@@ -247,11 +270,16 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSAppleEventsUsageDescription = com.apple.Music;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = FloatingWindow/Info.plist;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "Wpop necesita leer la canción y la posición de Spotify o Apple Music para sincronizar las letras.";
+				INFOPLIST_KEY_SUAutomaticallyUpdate = YES;
+				INFOPLIST_KEY_SUEnableAutomaticChecks = YES;
+				INFOPLIST_KEY_SUFeedURL = "https://github.com/EmmanuelCanto/wpop/releases/latest/download/appcast.xml";
+				INFOPLIST_KEY_SUPublicEDKey = "NHqGoolQWK+XncfI0RstLXghp+34C9xM8tFqJrdV7j0=";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -266,9 +294,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 26.2;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Emmmanuel-Canto.FloatingWindow";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Wpop;
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -291,11 +319,16 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSAppleEventsUsageDescription = com.apple.Music;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = FloatingWindow/Info.plist;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "Wpop necesita leer la canción y la posición de Spotify o Apple Music para sincronizar las letras.";
+				INFOPLIST_KEY_SUAutomaticallyUpdate = YES;
+				INFOPLIST_KEY_SUEnableAutomaticChecks = YES;
+				INFOPLIST_KEY_SUFeedURL = "https://github.com/EmmanuelCanto/wpop/releases/latest/download/appcast.xml";
+				INFOPLIST_KEY_SUPublicEDKey = "NHqGoolQWK+XncfI0RstLXghp+34C9xM8tFqJrdV7j0=";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -310,9 +343,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 26.2;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Emmmanuel-Canto.FloatingWindow";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Wpop;
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -330,7 +363,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4BB46CB02F61297F0092369A /* Build configuration list for PBXProject "FloatingWindow" */ = {
+		4BB46CB02F61297F0092369A /* Build configuration list for PBXProject "Wpop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4BB46CBE2F6129810092369A /* Debug */,
@@ -349,6 +382,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7709609D580C40E8ABDE2468 /* XCRemoteSwiftPackageReference "Sparkle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparkle-project/Sparkle";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C598DCB28E13446DB1666578 /* Sparkle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7709609D580C40E8ABDE2468 /* XCRemoteSwiftPackageReference "Sparkle" */;
+			productName = Sparkle;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4BB46CAD2F61297F0092369A /* Project object */;
 }

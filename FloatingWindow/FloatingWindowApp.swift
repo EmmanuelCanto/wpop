@@ -9,5 +9,12 @@ struct FloatingWindowApp: App {
         Settings {
             EmptyView()
         }
+        .commands {
+            CommandGroup(after: .appInfo) {
+                Button("Buscar actualizaciones…") {
+                    appDelegate.checkForUpdates(nil)
+                }
+            }
+        }
     }
 }

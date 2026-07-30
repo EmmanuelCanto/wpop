@@ -1,11 +1,18 @@
 import SwiftUI
 import AppKit
+import Sparkle
 
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     var window: NSWindow!
+    private lazy var updaterController = SPUStandardUpdaterController(
+        startingUpdater: true,
+        updaterDelegate: nil,
+        userDriverDelegate: nil
+    )
 
     func applicationDidFinishLaunching(_ notification: Notification) {
+        _ = updaterController
 
         let window = NSWindow(
             contentRect: NSRect(x: 400, y: 400, width: 320, height: 220),
@@ -57,5 +64,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.makeKeyAndOrderFront(nil)
 
         self.window = window
+    }
+
+    @objc func checkForUpdates(_ sender: Any?) {
+        updaterController.checkForUpdates(sender)
     }
 }
